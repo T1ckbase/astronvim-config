@@ -6,6 +6,7 @@ if vim.g.neovide then
   vim.o.guifont = "JetBrainsMonoNL NF:h11"
   vim.opt.linespace = 0
   vim.g.neovide_scale_factor = 1.0
+  vim.g.neovide_floating_shadow = false
   vim.g.neovide_title_background_color = "black"
   vim.g.neovide_title_text_color = "gray"
   vim.g.neovide_position_animation_length = 0.06

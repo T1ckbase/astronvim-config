@@ -7,12 +7,12 @@ return {
 
   -- == Examples of Adding Plugins ==
 
-  -- "andweeb/presence.nvim",
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "BufRead",
-  --   config = function() require("lsp_signature").setup() end,
-  -- },
+  "andweeb/presence.nvim",
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "BufRead",
+    config = function() require("lsp_signature").setup() end,
+  },
 
   -- == Examples of Overriding Plugins ==
 
@@ -247,5 +247,14 @@ M-       ,=;;;#:,      ,:#;;:=,       ,@
         return buf_utils.is_large(bufnr) or not buf_utils.is_valid(bufnr)
       end,
     },
+  },
+
+  {
+    "Saghen/blink.cmp",
+    opts = function(_, opts)
+      opts.completion.menu.border = "none"
+      opts.completion.documentation.window.border = "none"
+      opts.signature.window.border = "none"
+    end,
   },
 }
