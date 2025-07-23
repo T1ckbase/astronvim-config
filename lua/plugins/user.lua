@@ -205,6 +205,14 @@ M-       ,=;;;#:,      ,:#;;:=,       ,@
   },
 
   {
+    "webhooked/kanso.nvim",
+    lazy = false,
+    priority = 1000,
+  },
+
+  { "kamwitsta/vinyl.nvim" },
+
+  {
     "AstroNvim/astrocore",
     ---@type AstroCoreOpts
     opts = {

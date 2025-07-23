@@ -72,4 +72,7 @@ vim.keymap.set("v", "<A-j>", "<Cmd> m '>+1<CR>gv=gv", { desc = "Move Line Down" 
 vim.keymap.set({ "n", "i" }, "<A-K>", "<Cmd>copy .-1<cr>", { desc = "Copy Line Up" })
 vim.keymap.set({ "n", "i" }, "<A-J>", "<Cmd>copy .<cr>", { desc = "Copy Line Down" })
 
+vim.opt.scrolloff = 4
+vim.opt.cursorline = false
+
 -- vim.notify
