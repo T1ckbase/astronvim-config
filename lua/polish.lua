@@ -3,7 +3,7 @@
 -- fit in the normal config locations above can go here
 
 if vim.g.neovide then
-  vim.o.guifont = "JetBrainsMonoNL NF:h11"
+  vim.o.guifont = "JetBrainsMonoNL Nerd Font:h11"
   vim.opt.linespace = 0
   vim.g.neovide_scale_factor = 1.0
   vim.g.neovide_floating_shadow = false
@@ -73,6 +73,11 @@ vim.keymap.set({ "n", "i" }, "<A-K>", "<Cmd>copy .-1<cr>", { desc = "Copy Line U
 vim.keymap.set({ "n", "i" }, "<A-J>", "<Cmd>copy .<cr>", { desc = "Copy Line Down" })
 
 vim.opt.scrolloff = 4
+vim.opt.sidescrolloff = 8
 vim.opt.cursorline = false
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.winborder = "none"
 
 -- vim.notify
