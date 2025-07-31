@@ -66,8 +66,8 @@ vim.keymap.set("n", "<A-k>", "<Cmd> m .-2<CR>mz==j==k`z", { desc = "Move Line Up
 vim.keymap.set("n", "<A-j>", "<Cmd> m .+1<CR>mz==k==j`z", { desc = "Move Line Down" })
 vim.keymap.set("i", "<A-k>", "<Cmd> m .-2<CR><ESC>==j==kgi", { desc = "Move Line Up" })
 vim.keymap.set("i", "<A-j>", "<Cmd> m .+1<CR><ESC>==k==jgi", { desc = "Move Line Down" })
-vim.keymap.set("v", "<A-k>", "<Cmd> m '<-2<CR>gv=gv", { desc = "Move Line Up" })
-vim.keymap.set("v", "<A-j>", "<Cmd> m '>+1<CR>gv=gv", { desc = "Move Line Down" })
+-- vim.keymap.set("v", "<A-k>", "<Cmd> m '<-2<CR>gv=gv", { desc = "Move Line Up" })
+-- vim.keymap.set("v", "<A-j>", "<Cmd> m '>+1<CR>gv=gv", { desc = "Move Line Down" })
 
 vim.keymap.set({ "n", "i" }, "<A-K>", "<Cmd>copy .-1<cr>", { desc = "Copy Line Up" })
 vim.keymap.set({ "n", "i" }, "<A-J>", "<Cmd>copy .<cr>", { desc = "Copy Line Down" })
