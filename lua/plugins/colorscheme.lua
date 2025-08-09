@@ -1,11 +1,13 @@
+if true then return {} end
+
 ---@type LazySpec
 return {
   {
-    "zenbones-theme/zenbones.nvim",
+    'zenbones-theme/zenbones.nvim',
     -- Optionally install Lush. Allows for more configuration or extending the colorscheme
     -- If you don't want to install lush, make sure to set g:zenbones_compat = 1
     -- In Vim, compat mode is turned on as Lush only works in Neovim.
-    dependencies = "rktjmp/lush.nvim",
+    dependencies = 'rktjmp/lush.nvim',
     lazy = false,
     priority = 1000,
     -- you can set set configuration options here
@@ -14,5 +16,5 @@ return {
     --     vim.cmd.colorscheme('zenbones')
     -- end
   },
-  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+  { 'ellisonleao/gruvbox.nvim', priority = 1000, config = true, opts = ... },
 }
