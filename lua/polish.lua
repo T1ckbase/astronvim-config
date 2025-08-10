@@ -52,7 +52,7 @@ if vim.g.neovide then
   end, { desc = 'Restart Neovide' })
 end
 
-vim.keymap.set({ 'i', 'c' }, '<C-V>', '<C-r>+', { desc = 'Paste from system clipboard' })
+vim.keymap.set({ 'i', 'c' }, '<C-S-v>', '<C-r>+', { desc = 'Paste from system clipboard' })
 
 vim.keymap.set('i', '<C-/>', '<ESC>mbgcc`ba', { desc = 'Toggle comment', remap = true })
 vim.keymap.set('n', '<C-/>', 'mbgcc`b', { desc = 'Toggle comment', remap = true })
@@ -83,4 +83,5 @@ vim.api.nvim_create_user_command('Test', function()
   vim.api.nvim_buf_set_extmark(0, ns_id2, 5, 5, { virt_text = { { 'Text B', 'Normal' } }, virt_text_pos = 'eol' })
 end, {})
 
+-- vim.keymap.set('n', '<C-S-v>', function() vim.notify('Hello') end, { desc = 'Test' })
 -- vim.notify

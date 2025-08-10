@@ -11,6 +11,9 @@ return {
         border = 'solid',
       },
     },
+    formatting = {
+      -- format_on_save = false,
+    },
     ---@diagnostic disable: missing-fields
     config = {
       denols = {
