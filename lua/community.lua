@@ -12,7 +12,7 @@ return {
   { import = 'astrocommunity.pack.astro' },
   { import = 'astrocommunity.pack.tailwindcss' },
   { import = 'astrocommunity.pack.typescript-all-in-one' },
-  { import = 'astrocommunity.pack.zig' },
+  -- { import = 'astrocommunity.pack.zig' },
   { import = 'astrocommunity.recipes.heirline-vscode-winbar' },
   { import = 'astrocommunity.recipes.neo-tree-dark' },
   { import = 'astrocommunity.recipes.vscode-icons' },

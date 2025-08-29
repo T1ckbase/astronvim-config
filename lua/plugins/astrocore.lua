@@ -16,12 +16,19 @@ return {
       },
     },
     options = {
+      g = {
+        loaded_node_provider = 0,
+        loaded_perl_provider = 0,
+        loaded_python3_provider = 0,
+        loaded_ruby_provider = 0,
+      },
       opt = {
-        -- cmdheight = 1,
+        cmdheight = 1,
         fileformat = 'unix',
         fileformats = { 'unix', 'dos' },
         scrolloff = 4,
         sidescrolloff = 8,
+        swapfile = false,
         winborder = 'solid',
         wrap = false,
       },
