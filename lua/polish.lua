@@ -67,6 +67,7 @@ vim.keymap.set({ 'n', 'i' }, '<M-J>', '<Cmd>copy .<cr>', { desc = 'Copy Line Dow
 vim.keymap.set({ 'n', 'i' }, '<M-K>', '<Cmd>copy .-1<cr>', { desc = 'Copy Line Up' })
 vim.keymap.set('v', '<M-J>', ":<C-u>'<,'>copy '<-1<cr>gv=gv", { desc = 'Copy Selection Down' })
 vim.keymap.set('v', '<M-K>', ":<C-u>'<,'>copy '><cr>gv=gv", { desc = 'Copy Selection Up' })
+vim.keymap.set('n', '<C-S-K>', vim.diagnostic.open_float, { desc = 'Hover diagnostic' })
 
 vim.api.nvim_create_autocmd('OptionSet', {
   pattern = 'background',

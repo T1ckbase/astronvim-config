@@ -1,3 +1,8 @@
 {
-  "format.enable": false
+  "$schema": "https://raw.githubusercontent.com/sumneko/vscode-lua/master/setting/schema.json",
+  "runtime.version": "LuaJIT",
+  "format.defaultConfig": {
+    "quote_style": "single",
+    "max_line_length": "160"
+  }
 }

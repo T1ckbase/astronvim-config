@@ -11,31 +11,31 @@ return {
       status.component.git_branch(),
       status.component.git_diff(),
       status.component.diagnostics(),
-      status.component.builder({
-        provider = function()
-          local line = vim.api.nvim_win_get_cursor(0)[1] - 1
-          local diags = vim.diagnostic.get(0, { lnum = line })
-          if #diags == 0 then return '' end
-
-          local error_msg = ''
-          for _, diag in ipairs(diags) do
-            if diag.severity == vim.diagnostic.severity.ERROR then
-              error_msg = diag.message
-              break -- Found the first error, exit loop
-            end
-          end
-
-          if #error_msg > 50 then
-            return error_msg:sub(1, 50) .. '...'
-          else
-            return error_msg
-          end
-        end,
-        condition = function(bufnr)
-          return require('astroui.status.condition').has_diagnostics(bufnr) and vim.api.nvim_get_mode().mode == 'i'
-        end,
-        hl = { fg = 'diag_ERROR' },
-      }),
+      -- status.component.builder({
+      --   provider = function()
+      --     local line = vim.api.nvim_win_get_cursor(0)[1] - 1
+      --     local diags = vim.diagnostic.get(0, { lnum = line })
+      --     if #diags == 0 then return '' end
+      --
+      --     local error_msg = ''
+      --     for _, diag in ipairs(diags) do
+      --       if diag.severity == vim.diagnostic.severity.ERROR then
+      --         error_msg = diag.message
+      --         break -- Found the first error, exit loop
+      --       end
+      --     end
+      --
+      --     if #error_msg > 50 then
+      --       return error_msg:sub(1, 50) .. '...'
+      --     else
+      --       return error_msg
+      --     end
+      --   end,
+      --   condition = function(bufnr)
+      --     return require('astroui.status.condition').has_diagnostics(bufnr) and vim.api.nvim_get_mode().mode == 'i'
+      --   end,
+      --   hl = { fg = 'diag_ERROR' },
+      -- }),
       status.component.fill(),
       status.component.cmd_info(),
       status.component.fill(),
@@ -68,8 +68,12 @@ return {
       status.component.lsp(),
       status.component.virtual_env(),
       status.component.treesitter(),
-      status.component.nav(),
-      -- remove the 2nd mode indicator on the right
+      status.component.builder(
+        require('astroui.status.utils').setup_providers(
+          vim.tbl_get(require('astroui').config.status, 'components', 'nav'),
+          { 'ruler', 'percentage' }
+        )
+      ),
     }
   end,
 }

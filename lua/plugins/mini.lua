@@ -1,7 +1,6 @@
 ---@type LazySpec
 return {
-  'echasnovski/mini.nvim',
-  version = '*',
+  'nvim-mini/mini.nvim',
   config = function()
     require('mini.ai').setup({
       mappings = {
@@ -13,6 +12,12 @@ return {
         goto_right = '',
       },
       silent = true,
+    })
+
+    require('mini.comment').setup({
+      mappings = {
+        textobject = 'igc',
+      },
     })
   end,
 }

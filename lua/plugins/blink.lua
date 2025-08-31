@@ -38,7 +38,7 @@ return {
       ['<C-s>'] = { 'show_signature', 'hide_signature', 'fallback' },
     },
     completion = {
-      keymap = { preset = 'inherit' },
+      -- keymap = { preset = 'inherit' },
       list = { selection = { preselect = true, auto_insert = false } },
       menu = {
         border = 'none',
